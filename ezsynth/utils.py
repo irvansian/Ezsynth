@@ -5,7 +5,7 @@ import os
 import cv2
 import torch
 import torch.nn.functional as F
-from ezsynth import ebsynth as eb
+import ebsynth as eb
 from .reconstruction import poisson_fusion
 from .histogram_blend import HistogramBlender
 from .guide_classes import Guides
