@@ -21,7 +21,7 @@ class Ezsynth:
     """
 
     def __init__(self, styles: Union[str, List[str]], imgsequence: str,
-                 flow_method: str = 'RAFT', edge_method: str = 'PAGE', flow_model: str = 'sintel'):
+                 flow_method: str = 'RAFT', edge_method: str = 'PAGE', flow_model: str = 'sintel', device: str = 'cpu'):
         """
         Initialize the Ezsynth instance.
         
@@ -76,7 +76,7 @@ class Ezsynth:
         >>> or to do something else, results = ez.set_guides().stylize()
         """
         logging.info("Initializing Ezsynth...")
-        self.DEVICE = 'cuda'
+        self.DEVICE = device
         self._validate_flow_method(flow_method)
         self._validate_edge_method(edge_method)
         self._validate_model_name(flow_model)
